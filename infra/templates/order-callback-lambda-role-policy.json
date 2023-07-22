@@ -1,11 +1,11 @@
 {
   "Version": "2012-10-17",
+  "Id": "OrderCallbackLambdaRole",
   "Statement": [
     {
-      "Sid": "",
       "Effect": "Allow",
       "Principal": {
-        "Service": "apigateway.amazonaws.com"
+        "Service": "lambda.amazonaws.com"
       },
       "Action": "sts:AssumeRole"
     }

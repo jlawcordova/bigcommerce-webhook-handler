@@ -1,0 +1,24 @@
+{
+  "name": "bigcommerce-order-callback-handler",
+  "version": "1.0.0",
+  "description": "A lambda function which receives order create webhooks from BigCommerce.",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlawcordova/bigcommerce-order-callback-handler.git"
+  },
+  "keywords": [
+    "BigCommerce",
+    "webhook",
+    "Terraform",
+    "AWS"
+  ],
+  "author": "J. Law. Cordova",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jlawcordova/bigcommerce-order-callback-handler/issues"
+  },
+  "homepage": "https://github.com/jlawcordova/bigcommerce-order-callback-handler#readme"
+}
