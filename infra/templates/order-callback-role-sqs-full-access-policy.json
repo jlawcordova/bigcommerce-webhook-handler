@@ -1,0 +1,15 @@
+{
+  "Version": "2012-10-17",
+  "Id": "OrderCallbackRoleSQSFullAccess",
+  "Statement": [
+    {
+      "Sid": "AllowOrderCallbackRoleSQSFullAccess",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "${order_callback_role}"
+      },
+      "Action": ["SQS:*"],
+      "Resource": "arn:aws:sqs:*"
+    }
+  ]
+}
