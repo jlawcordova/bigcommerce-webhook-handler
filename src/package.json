@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "A lambda function which receives order create webhooks from BigCommerce.",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jlawcordova/bigcommerce-order-callback-handler.git"
@@ -20,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/jlawcordova/bigcommerce-order-callback-handler/issues"
   },
-  "homepage": "https://github.com/jlawcordova/bigcommerce-order-callback-handler#readme"
+  "homepage": "https://github.com/jlawcordova/bigcommerce-order-callback-handler#readme",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.119",
+    "typescript": "^5.1.6"
+  }
 }
