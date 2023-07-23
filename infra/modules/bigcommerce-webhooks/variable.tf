@@ -6,7 +6,7 @@ variable "project" {
 
 variable "lambda_src_path" {
   type        = string
-  default     = "/../../../src"
+  default     = "/../../../src/dist"
   description = "The relative path of where the source code for the lambda function resides."
 }
 
