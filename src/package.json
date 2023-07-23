@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/jlawcordova/bigcommerce-order-callback-handler#readme",
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.119",
     "typescript": "^5.1.6"
   }
 }
