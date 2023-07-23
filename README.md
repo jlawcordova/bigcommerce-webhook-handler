@@ -29,6 +29,16 @@ terraform init
 terraform apply
 ```
 
+After the infrastructure is created, the destination URL for the webhook would appear as follows.
+
+```
+Outputs:
+
+destination = "https://fjrsnbhoo3.execute-api.eu-north-1.amazonaws.com/default"
+```
+
+[Create a webhook](https://developer.bigcommerce.com/api-docs/store-management/webhooks/about-webhooks#creating-a-webhook) in BigCommerce with this destination and the desired scope. Any event in BigCommerce with the given scope should make a callback to the infrastructure.
+
 # Process BigCommerce Webhook Callbacks
 Place all processing logic for the BigCommerce webhook callbacks in the [`src/process.ts`](./src/process.ts) file.
 

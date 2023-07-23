@@ -20,7 +20,7 @@ resource "random_pet" "project" {
   length = 2
 }
 
-module "bigcommerce-webhooks" {
+module "bigcommerce_webhooks" {
   source = "./modules/bigcommerce-webhooks"
 
   # Use a random name when the project variable is not set.
