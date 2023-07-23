@@ -6,7 +6,7 @@
       "Sid": "AllowOrderCallbackRoleSQSFullAccess",
       "Effect": "Allow",
       "Principal": {
-        "AWS": "${order_callback_role}"
+        "AWS": "${bigcommerce_webhook_api_gateway_integration_role}"
       },
       "Action": ["SQS:*"],
       "Resource": "arn:aws:sqs:*"
