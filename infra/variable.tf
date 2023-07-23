@@ -1,5 +1,12 @@
-variable "order_callback_bucket_name" {
+variable "project" {
+  description = "The name of the project. This is used for resource naming and tagging."
   type        = string
-  default     = "bigcommerce-order-callback-handler-jlawcordova"
-  description = "The name of the bucket where the Lambda function code will be stored."
+  default     = ""
+  nullable    = true
+}
+
+variable "environment" {
+  description = "The type of environment where the webhook handler is deployed. This is used for resource tagging."
+  type        = string
+  default     = "development"
 }

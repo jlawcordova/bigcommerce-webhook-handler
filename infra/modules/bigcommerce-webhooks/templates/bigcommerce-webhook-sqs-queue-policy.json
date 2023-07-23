@@ -1,0 +1,25 @@
+{
+  "Version": "2012-10-17",
+  "Id": "BigcommerceWebhookSQSQueue",
+  "Statement": [
+    {
+      "Sid": "AllowOrderCallbackAPIGatewayRoleSQSSendMessageAccess",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "${bigcommerce_webhook_api_gateway_integration_role}"
+      },
+      "Action": ["SQS:SendMessage"],
+      "Resource": "arn:aws:sqs:*"
+    },
+    {
+      "Sid": "AllowOrderCallbackLambdaRoleSQSReceiveMessageAccess",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "${bigcommerce_webhook_lambda_role}"
+      },
+      "Action": ["SQS:DeleteMessage", "SQS:GetQueueAttributes", "SQS:ReceiveMessage"],
+      "Resource": "arn:aws:sqs:*"
+    }
+  ]
+}
+
