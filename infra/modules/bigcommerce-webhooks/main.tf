@@ -95,7 +95,7 @@ resource "aws_sqs_queue_policy" "bigcommerce_webhook" {
   )
 }
 
-# Setup the Lambda function, its roles, and corresponding S3 bucket.
+# Setup the Lambda function, its roles, corresponding S3 bucket and SQS trigger.
 resource "aws_lambda_function" "bigcommerce_webhook" {
   function_name = var.project
 
@@ -149,6 +149,14 @@ resource "aws_iam_role" "bigcommerce_webhook_lambda" {
     Environment = var.environment
   }
 }
+
+resource "aws_lambda_event_source_mapping" "bigcommerce_webhook_sqs" {
+  event_source_arn = aws_sqs_queue.bigcommerce_webhook.arn
+  function_name    = aws_lambda_function.bigcommerce_webhook.arn
+
+  depends_on = [ aws_sqs_queue_policy.bigcommerce_webhook ]
+}
+
 
 # Create logging for the Lambda function.
 resource "aws_cloudwatch_log_group" "bigcommerce_webhook_lambda" {
