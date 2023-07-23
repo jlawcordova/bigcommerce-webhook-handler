@@ -91,7 +91,7 @@ resource "aws_sqs_queue_policy" "bigcommerce_webhook" {
   policy = templatefile("${path.module}/templates/bigcommerce-webhook-sqs-queue-policy.json",
     {
       bigcommerce_webhook_api_gateway_integration_role = aws_iam_role.bigcommerce_webhook_api_gateway_integration.arn
-      bigcommerce_webhook_lambda_role = aws_iam_role.bigcommerce_webhook_api_gateway_integration.arn
+      bigcommerce_webhook_lambda_role = aws_iam_role.bigcommerce_webhook_lambda.arn
     }
   )
 }
